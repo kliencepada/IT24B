@@ -18,6 +18,18 @@
 
 <h1 id="displayText">Your text will appear here</h1>
 
+<script>
+
+
+    function updateDisplay(){
+        var textbox = document.getElementById('textbox');
+        var displayText = document.getElementById('displayText');
+
+        displayText.textContent = textbox.value;
+        console.log(textbox.value +" "+Date());
+    }
+
+
 
 </body>
 </html>
