@@ -74,3 +74,45 @@
         console.log("handleDeleteClick() ->", li.textContent.replace(" X ", "").trim(), Date());
         li.remove();
     }
+
+       function addTaskItem(taskText) {
+        const li = document.createElement("li");
+        li.textContent = taskText;
+
+        document.getElementById("taskList").appendChild(li);
+        console.log("addTaskItem() called -> ", taskText, Date());
+
+        const deleteBtn = createDeleteButton(li);
+        li.appendChild(deleteBtn);
+
+        const taskSpan = document.createElement("span");
+        taskSpan.textContent = taskText;
+
+        const editBtn = createEditButton(li, taskSpan);
+        li.appendChild(editBtn);
+    }
+
+    function createEditButton(li, taskSpan) {
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.className = "edit-btn";
+        editBtn.style.marginLeft = "8px";
+        editBtn.onclick = () => handleEditClick(li);
+
+        console.log("createEditButton() called ->:", taskSpan.textContext);
+        return editBtn;
+    }
+
+    function handleEditClick(li) {
+        const currentText = li.firstChild.textContent.trim();
+        console.log("handleEditClick() -> current:", currentText, Date());
+
+        const newText = prompt("Edit your task", currentText);
+
+        if (newText !== null && newText.trim() !== "") {
+            li.firstChild.textContent = newText.trim();
+            console.log("handleEditClick() -> update to: ", newText.trim(), Date());
+        } else {
+            console.log("handleEditClick() -> no changes made");
+        }
+    }
