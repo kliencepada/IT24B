@@ -49,7 +49,22 @@ function initMap(mapId){
 }).addTo(map);
 console.log("Map loaded" + Date());
 
+fetch(mapDataUrl)
+.then(response => response.json())
+.then(data => {
 
+    data.foreach(pin=>{
+        const marker = L.marker([pin.lat, pin.lng]).addTo(map);
+        marker.bindPopup(`${pin.name}<br>${pin.description}`);
+    });
+})
+.catch(err=>console.error('Error loading JSON:', err))
+
+}
+
+
+
+</script>
 
 </html>
 
