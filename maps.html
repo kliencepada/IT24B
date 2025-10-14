@@ -39,5 +39,17 @@ var marker = L.marker([8.3593, 124.8691]).addTo(map);
 marker.bindPopup("<b>Hello world!</b><br>Ang nagbasa Gay.").openPopup();
 
 
+
+function initMap(mapId){
+     const map = L.map('map').setView([8.360338666156164, 124.86859652202197], 17);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+console.log("Map loaded" + Date());
+
+
+
 </html>
 
