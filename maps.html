@@ -28,19 +28,10 @@
 
 </body>
 <script>
-    var map = L.map('map').setView([8.360338666156164, 124.86859652202197], 17);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-var marker = L.marker([8.3593, 124.8691]).addTo(map);
-marker.bindPopup("<b>Hello world!</b><br>Ang nagbasa Gay.").openPopup();
 
 
 
-function initMap(mapId){
+function initMap(mapDataUrl){
      const map = L.map('map').setView([8.360338666156164, 124.86859652202197], 17);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -53,7 +44,7 @@ fetch(mapDataUrl)
 .then(response => response.json())
 .then(data => {
 
-    data.foreach(pin=>{
+    data.forEach(pin=>{
         const marker = L.marker([pin.lat, pin.lng]).addTo(map);
         marker.bindPopup(`${pin.name}<br>${pin.description}`);
     });
@@ -63,7 +54,7 @@ fetch(mapDataUrl)
 }
 
 document.addEventListener('DOMContentLoaded',()=>{
-    initMap('map')
+    initMap('maps.json');
 })
 
 </script>
