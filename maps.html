@@ -21,6 +21,7 @@
     .popup-image{
         max-width: 200px;
         height: auto;
+        object-fit: fill;
     }
     </style>
 
@@ -43,6 +44,7 @@ function initMap(mapDataUrl){
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 console.log("Map loaded" + Date());
+
 
 fetch(mapDataUrl)
 .then(response => response.json())
