@@ -41,10 +41,18 @@
             {attribution:'Tiles (c) Esri - Source, Maxar, Earthstar Geographics, and GIS User Community'}
         );
 
-        openStreetMap.addTo(Map);
+        openStreetMap.addTo(map);
         console.log("Base map tile layer loaded" + Date());
 
         const markerGroups = {};
+
+
+        fetch(mapDataUrl)
+        .then(response => response.json())
+        .then(data=>{
+            data.forEach(pin=> {
+                const type = pint.locationType || "Other";
+                 
 
       
           })
