@@ -58,6 +58,18 @@
                     markerGroups[type] = L.layerGroup();
                 }
 
+                //Marker and Popup
+                const marker = L.marker([pin.lat, pin.lng]).addTo(map);
+                const img = <img src='${pin.img}' class="popup-image">;
+                marker.bindPopup(`
+                ${img} <br>
+                <br>${pin.title}<br>
+                ${pin.description}
+                `);
+                console.log({pin.name} Loaded  + Date());
+
+                markerGroups[type].addLayer(marker);
+            });
 
           })
 
