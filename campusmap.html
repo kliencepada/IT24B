@@ -71,6 +71,10 @@
                 markerGroups[type].addLayer(marker);
             });
 
+            //Add marker groups into the map according to marker filter
+            Object.values(markerGroups).forEach(group => group.addTo(map));
+
+ 
           })
 
         })
