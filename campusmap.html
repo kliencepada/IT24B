@@ -27,7 +27,15 @@
      <div id="map"></div>
 <script>
     function initMap(mapDataUrl){
+        const map = L.titleLayer([8.3603,124.8684],17)
 
+        //open street map
+        const openStreetMap = L.titleLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+            maxZoom:19,
+            attribution:'&copy; OpenStreetMap contributors'
+        })
+
+        
     }
 document.addEventListener("DOMContentLoaded",()=>{
     initMap('campus-map.json');
