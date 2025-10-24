@@ -1,8 +1,20 @@
 [
     {
         "name":"ICS Laboratory 1",
+        "title":"ICS Lab 1",
+        "description":"This is the ICS Laboratory 1, yipee",
+        "img":"https://th.bing.com/th/id/OIP.j_czMMRl1s3HpJmPzCYbjwHaHa?w=200&h=201&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3",
         "lat":8.3593,
-        "lng":124.8691,
-        "description":"This is the ICS Laboratory 1, yipee"
+        "lng":124.8691
+        
+    },
+     {
+        "name":"Asa namayot si Sam",
+        "title":"Sam Gapamayot.",
+        "description":"This is Sam, I love mens",
+        "img":"https://th.bing.com/th/id/OIP.j_czMMRl1s3HpJmPzCYbjwHaHa?w=200&h=201&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3",
+        "lat":8.361122463832983, 
+        "lng":124.86865902578303
+        
     }
 ]
