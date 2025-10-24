@@ -41,7 +41,15 @@
             {attribution:'Tiles (c) Esri - Source, Maxar, Earthstar Geographics, and GIS User Community'}
         );
 
-       
+        openStreetMap.addTo(Map);
+        console.log("Base map tile layer loaded" + Date());
+
+
+
+      
+          })
+
+        })
     }
 document.addEventListener("DOMContentLoaded",()=>{
     initMap('campus-map.json');
