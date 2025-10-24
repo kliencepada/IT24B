@@ -88,11 +88,9 @@
             });
 
             L.control.layers(baseMaps,)
-        
-      
-          })
+        });
+        .catch(err=>console.error('Error loading JSON:', err))
 
-        })
     }
 document.addEventListener("DOMContentLoaded",()=>{
     initMap('campus-map.json');
