@@ -74,7 +74,22 @@
             //Add marker groups into the map according to marker filter
             Object.values(markerGroups).forEach(group => group.addTo(map));
 
- 
+            //Map layer Control
+            const baseMaps={
+                "OpenStreetMap":OpenStreetMap,
+                "Satellite":satellite
+            }
+
+            const overLayMaps={};
+
+            //Add marker group into base map
+            Object.keys(markerGroups).forEach(type=>{
+                overLayMap[type] = markerGroups[type];
+            });
+
+            L.control.layers(baseMaps,)
+        
+      
           })
 
         })
