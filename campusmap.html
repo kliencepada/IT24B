@@ -53,8 +53,12 @@
             data.forEach(pin=> {
                 const type = pint.locationType || "Other";
                  
+                //Create Marker Group
+                if(!markerGroups[type]){
+                    markerGroups[type] = L.layerGroup();
+                }
 
-      
+
           })
 
         })
