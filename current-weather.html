@@ -8,7 +8,7 @@
 <body>
     <h1>Current Weather</h1>
 
-    <button onclick="getWeather()">Get Weather</button>
+    <button onclick="getWeather()">Get Current Weather</button>
     <div id="weatherResult"></div>
 
 </body>
@@ -39,7 +39,10 @@ weatherResult.innerHTML = `
     <p>Humidity: ${data.main.humidity} %</p>
     <p>Wind Speed: ${data.wind.speed} m/s</p>
 `;
-}catch(error)
+}catch(error){
+     console.log("Error: "+ error.message);
+}
+
 
 </script>
 
