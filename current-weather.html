@@ -20,7 +20,13 @@
         console.log("Prompt opened. " + Date());
         const city = prompt("Enter a city name");
         console.log("Prompt closed. " + Date());
+        return;
     }
+    //API Call
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+
+
 </script>
 
 </html>
